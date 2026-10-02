@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kusuma Vijay Dyavakkalavar | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050b18;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 11, 24, 0.95);
+            border-bottom: 1px solid #1d2942;
+            padding: 18px 7%;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #8c7cff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8c7cff;
+        }
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 45px;
+            color: #ffffff;
+        }
+
+        .section-title span {
+            color: #8c7cff;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #8c7cff;
+        }
+
+        .hero-text h2 {
+            font-size: 25px;
+            color: #c7cce0;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #aeb6ca;
+            max-width: 650px;
+            margin-bottom: 25px;
+        }
+
+        /* ================= PROFILE PHOTO ================= */
+
+        .hero-image {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo {
+            width: 220px;
+            height: 280px;
+            object-fit: contain;
+            object-position: center center;
+            display: block;
+            border-radius: 10px;
+            border: 2px solid #6254e7;
+            background: #071226;
+            box-shadow: 0 0 25px rgba(98, 84, 231, 0.3);
+            image-rendering: auto;
+        }
+
+        /* ================= CONTACT INFO ================= */
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #cbd2e5;
+        }
+
+        .contact-item a {
+            color: #8c7cff;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #6254e7;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5144d1;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #6254e7;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: #6254e7;
+            transform: translateY(-2px);
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .about-box p {
+            color: #b7bfd2;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================================
+           ================= SKILLS & TECHNOLOGIES =================
+           ========================================================= */
+
+        .skills-box {
+            max-width: 1150px;
+            margin: auto;
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .skills-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .skills-heading .icon {
+            color: #8c7cff;
+            font-size: 27px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #111d35;
+            border: 1px solid #263653;
+            border-radius: 7px;
+            padding: 10px 15px;
+            color: #ffffff;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            border-color: #6254e7;
+            transform: translateY(-3px);
+        }
+
+        .skill-icon {
+            font-size: 17px;
+        }
+
+        /* =========================================================
+           ================= FEATURED PROJECTS =====================
+           ========================================================= */
+
+        .projects-wrapper {
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .projects-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+        }
+
+        .projects-heading .icon {
+            color: #8c7cff;
+            font-size: 27px;
+        }
+
+        .view-projects {
+            border: 1px solid #6254e7;
+            padding: 9px 16px;
+            border-radius: 7px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .view-projects:hover {
+            background: #6254e7;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .project-card {
+            background: #111d35;
+            border: 1px solid #263653;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #6254e7;
+        }
+
+        .project-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .project-icon {
+            min-width: 55px;
+            height: 55px;
+            border-radius: 8px;
+            background: #6254e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
+
+        .project-card:nth-child(2) .project-icon {
+            background: #000000;
+        }
+
+        .project-card:nth-child(3) .project-icon {
+            background: #21b99b;
+        }
+
+        .project-card:nth-child(4) .project-icon {
+            background: #f06b3c;
+        }
+
+        .project-content h3 {
+            color: #ffffff;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .project-content p {
+            color: #aeb6ca;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .project-tag {
+            background: #17243d;
+            border: 1px solid #30415f;
+            color: #d5d9e6;
+            border-radius: 5px;
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+
+        /* =========================================================
+           ================= CERTIFICATIONS ========================
+           ========================================================= */
+
+        .certifications-box {
+            max-width: 900px;
+            margin: auto;
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .certifications-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .certifications-heading .icon {
+            color: #8c7cff;
+            font-size: 27px;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .certificate {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0;
+            background: #111d35;
+            border: 1px solid #263653;
+            border-radius: 10px;
+            padding: 18px;
+            color: #cbd2e5;
+            transition: 0.3s;
+        }
+
+        .certificate:hover {
+            transform: translateY(-4px);
+            border-color: #6254e7;
+        }
+
+        .certificate-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: rgba(98, 84, 231, 0.18);
+            color: #ff8585;
+            font-size: 25px;
+        }
+
+        .certificate-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .certificate-details h3 {
+            color: #ffffff;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .certificate-details p {
+            color: #aeb6ca;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            background: #6254e7;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .certificate-link:hover {
+            background: #5144d1;
+        }
+
+        @media (max-width: 600px) {
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ================= RESUME ================= */
+
+        .resume-box {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .resume-box p {
+            color: #aeb6ca;
+            margin-bottom: 25px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            background: #0b1428;
+            border: 1px solid #1d2942;
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .contact-box p {
+            color: #aeb6ca;
+            margin-bottom: 20px;
+        }
+
+        .contact-box a {
+            color: #8c7cff;
+            text-decoration: none;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1d2942;
+            color: #8f98ad;
+            font-size: 14px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-text h2 {
+                font-size: 21px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 4%;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text h2 {
+                font-size: 19px;
+            }
+
+            .photo {
+                width: 180px;
+                height: 230px;
+                object-fit: contain;
+                object-position: center center;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .skills-box,
+            .projects-wrapper,
+            .certifications-box {
+                padding: 20px;
+            }
+
+            .skill-badge {
+                font-size: 13px;
+                padding: 8px 11px;
+            }
+
+            .project-top {
+                gap: 10px;
+            }
+
+            .project-icon {
+                min-width: 48px;
+                height: 48px;
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Kusuma
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+            <div class="hero-text">
+
+                <h1>
+                    Hi, I'm <span>Kusuma Vijay Dyavakkalavar</span>
+                </h1>
+
+                <h2>
+                    BCA Graduate | Aspiring Software Developer
+                </h2>
+
+                <p>
+                    I am a BCA graduate passionate about software development,
+                    web technologies and learning new technologies. I enjoy
+                    building practical projects and continuously improving
+                    my technical skills.
+                </p>
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+                        📧
+                        <a href="mailto:kusumadyavakkalavar2006@gmail.com">
+                            email-mes
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        📍 Rattihalli, Haveri District, Karnataka
+                    </div>
+
+                    <div class="contact-item">
+                        💻
+                        <a
+                            href="https://kusumadyavakkalavar2006-hash.github.io/Kusuma-portfolio/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        🔗
+                        <a
+                            href="https://www.linkedin.com/in/kusuma-vijay-dyavakkalavar-b26330423"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a
+                        href="Kusuma_Vijay_Dyavakkalavar_Resume.pdf"
+                        target="_blank"
+                        class="btn btn-secondary">
+                        View Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASSPORT PHOTO -->
+
+            <div class="hero-image">
+
+                <img
+                    src="photo.jpeg"
+                    alt="Kusuma Vijay Dyavakkalavar"
+                    class="photo">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <div class="about-box">
+
+                <p>
+                    I am a BCA graduate with an interest in software
+                    development and modern web technologies.
+                </p>
+
+                <p>
+                    I am interested in developing useful applications,
+                    improving my programming skills and gaining practical
+                    experience in the software industry.
+                </p>
+
+                <p>
+                    I am a continuous learner who enjoys solving problems,
+                    exploring new technologies and working on projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ================= SKILLS ================================
+         ========================================================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Skills</span>
+            </h2>
+
+            <div class="skills-box">
+
+                <div class="skills-heading">
+                    <span class="icon">〈/〉</span>
+                    <span>Skills & Technologies</span>
+                </div>
+
+                <div class="skills-list">
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🐍</span>
+                        Python
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">◉</span>
+                        C
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">☕</span>
+                        Java
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🌐</span>
+                        HTML
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🎨</span>
+                        CSS
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🟨</span>
+                        JavaScript
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">⚗</span>
+                        Flask
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🗄️</span>
+                        SQLite
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🛢️</span>
+                        MySQL
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🤖</span>
+                        AI / ML
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🔶</span>
+                        Git
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">◉</span>
+                        GitHub
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">💻</span>
+                        VS Code
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🟢</span>
+                        PyCharm
+                    </div>
+
+                    <div class="skill-badge">
+                        <span class="skill-icon">🟣</span>
+                        Canva
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ================= PROJECTS ==============================
+         ========================================================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Featured <span>Projects</span>
+            </h2>
+
+            <div class="projects-wrapper">
+
+                <div class="projects-header">
+
+                    <div class="projects-heading">
+                        <span class="icon">▣</span>
+                        <span>Featured Projects</span>
+                    </div>
+
+                    <a href="#projects" class="view-projects">
+                        View All Projects →
+                    </a>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="project-card">
+
+                        <div class="project-top">
+
+                            <div class="project-icon">
+                                🛒
+                            </div>
+
+                            <div class="project-content">
+
+                                <h3>
+                                    AI Smart Cart
+                                </h3>
+
+                                <p>
+                                    E-commerce web app with AI-based
+                                    product recommendations.
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span class="project-tag">
+                                        Python
+                                    </span>
+
+                                    <span class="project-tag">
+                                        Flask
+                                    </span>
+
+                                    <span class="project-tag">
+                                        SQLite
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="project-card">
+
+                        <div class="project-top">
+
+                            <div class="project-icon">
+                                a
+                            </div>
+
+                            <div class="project-content">
+
+                                <h3>
+                                    Amazon Clone
+                                </h3>
+
+                                <p>
+                                    Responsive front-end Amazon
+                                    clone website.
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span class="project-tag">
+                                        HTML
+                                    </span>
+
+                                    <span class="project-tag">
+                                        CSS
+                                    </span>
+
+                                    <span class="project-tag">
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <div class="project-card">
+
+                        <div class="project-top">
+
+                            <div class="project-icon">
+                                💬
+                            </div>
+
+                            <div class="project-content">
+
+                                <h3>
+                                    AI College Chatbot
+                                </h3>
+
+                                <p>
+                                    Intelligent chatbot for student
+                                    queries and information.
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span class="project-tag">
+                                        Python
+                                    </span>
+
+                                    <span class="project-tag">
+                                        NLP
+                                    </span>
+
+                                    <span class="project-tag">
+                                        Flask
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <div class="project-card">
+
+                        <div class="project-top">
+
+                            <div class="project-icon">
+                                🍔
+                            </div>
+
+                            <div class="project-content">
+
+                                <h3>
+                                    Food Delivery Website
+                                </h3>
+
+                                <p>
+                                    Food ordering website with cart
+                                    and order tracking.
+                                </p>
+
+                                <div class="project-tags">
+
+                                    <span class="project-tag">
+                                        HTML
+                                    </span>
+
+                                    <span class="project-tag">
+                                        CSS
+                                    </span>
+
+                                    <span class="project-tag">
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ================= CERTIFICATIONS ========================
+         ========================================================= -->
+
+    <section id="certifications">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <span>Certifications</span>
+            </h2>
+
+            <div class="certifications-box">
+
+                <div class="certifications-heading">
+                    <span class="icon">♙</span>
+                    <span>My Certificates</span>
+                </div>
+
+                <div class="certificates-grid">
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Getting Started with Artificial Intelligence</h3>
+                            <p>IBM SkillsBuild · January 30, 2026</p>
+                            <a class="certificate-link" href="certificates/ibm-getting-started-ai.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Introduction to Artificial Intelligence</h3>
+                            <p>Infosys Springboard · April 10, 2025</p>
+                            <a class="certificate-link" href="certificates/introduction-to-ai.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Introduction to Cloud Computing</h3>
+                            <p>Infosys Springboard · March 16, 2025</p>
+                            <a class="certificate-link" href="certificates/introduction-to-cloud-computing.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Introduction to OpenAI GPT Models</h3>
+                            <p>Infosys Springboard · April 9, 2025</p>
+                            <a class="certificate-link" href="certificates/introduction-to-openai-gpt-models.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Python 101 for Data Science</h3>
+                            <p>Cognitive Class · IBM Developer Skills Network · September 26, 2025</p>
+                            <a class="certificate-link" href="certificates/python-101-for-data-science.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                    <div class="certificate">
+                        <div class="certificate-icon">📄</div>
+                        <div class="certificate-details">
+                            <h3>Fundamentals of Information Security</h3>
+                            <p>Infosys Springboard · March 16, 2025</p>
+                            <a class="certificate-link" href="certificates/fundamentals-of-information-security.pdf" target="_blank" rel="noopener noreferrer">View Certificate ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESUME ================= -->
+
+    <section id="resume">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Resume</span>
+            </h2>
+
+            <div class="resume-box">
+
+                <p>
+                    You can view my resume to learn more about my
+                    education, technical skills, projects and experience.
+                </p>
+
+                <a
+                    href="Kusuma_Vijay_Dyavakkalavar_Resume.pdf"
+                    target="_blank"
+                    class="btn btn-primary">
+                    View / Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact <span>Me</span>
+            </h2>
+
+            <div class="contact-box">
+
+                <p>
+                    Feel free to contact me for opportunities,
+                    collaborations or professional discussions.
+                </p>
+
+                <p>
+                    📧
+                    <a href="mailto:kusumadyavakkalavar2006@gmail.com">
+                        kusumadyavakkalavar2006@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    📞
+                    <a href="tel:9148026711">
+                        9148026711
+                    </a>
+                </p>
+
+                <p>
+                    💻
+                    <a
+                        href="https://github.com/kusumadyavakkalavar2006-hash"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub Profile
+                    </a>
+                </p>
+
+                <p>
+                    🔗
+                    <a
+                        href="https://www.linkedin.com/in/kusuma-vijay-dyavakkalavar-b26330423"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn Profile
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kusuma Vijay Dyavakkalavar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
